@@ -23,7 +23,16 @@ Download [tileList.txt](https://copernicus-dem-30m.s3.amazonaws.com/tileList.txt
 
 ## Script Workflow
 
+The shell script convert the original AVIRIS reflectance and ancillary image to 30m images and keep their old rotation.
+ 
 ![Workflow](./image/workflow_30m_wdts_geocorr.jpg)
+
+Run the script **workflow30m.sh**
+
+Usage 
+```bash
+bash ~/workflow30m.sh f140613t01p00r14_rfl_v1b_img f140613t01p00r14rdn_b_obs_ort ~/data/ ~/data/output/ ~/aws_dsm/ rflgeorot obsgeorot
+```
 
 1 Geo-rectification
 
