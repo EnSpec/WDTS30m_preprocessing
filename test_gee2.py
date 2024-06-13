@@ -92,6 +92,10 @@ def addNDVI_L8(image):
 
 def convert_coord(epsg_code,x,y):
     
+    # in the case of from 4326 to 4326
+    if int(epsg_code)==4326:
+      return x, y
+    
     point_srs = osr.SpatialReference()
     point_srs.ImportFromEPSG ( int(epsg_code) ) 
 
